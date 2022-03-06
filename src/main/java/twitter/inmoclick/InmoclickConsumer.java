@@ -21,16 +21,14 @@ public class InmoclickConsumer {
 
 
     public List<InmoclickPropiedad> casas = new ArrayList<>();
-    public List<InmoclickPropiedad> lotes = new ArrayList<>();
-    public List<InmoclickPropiedad> departamentos = new ArrayList<>();
 
     public void LoadValues(){
 
+
+        casas.clear();
         long start1 = System.currentTimeMillis();
         System.out.println("Start loading values");
         casas = listCasas();
-        //lotes = listLotes();
-        //departamentos = listDepartamentos();
 
 
         System.out.println("Finish loading values");
