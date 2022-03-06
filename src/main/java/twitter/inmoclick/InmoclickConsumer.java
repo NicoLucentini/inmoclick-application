@@ -29,8 +29,8 @@ public class InmoclickConsumer {
         long start1 = System.currentTimeMillis();
         System.out.println("Start loading values");
         casas = listCasas();
-        lotes = listLotes();
-        departamentos = listDepartamentos();
+        //lotes = listLotes();
+        //departamentos = listDepartamentos();
 
 
         System.out.println("Finish loading values");
@@ -73,8 +73,6 @@ public class InmoclickConsumer {
         return finalString;
     }
 
-
-
     private List<InmoclickPropiedad> consumePage(String url){
 
         long start1 = System.currentTimeMillis();
@@ -101,7 +99,6 @@ public class InmoclickConsumer {
         }
        return new ArrayList<InmoclickPropiedad>();
     }
-
 
     public List<InmoclickPropiedad> listLotes(){
         return consumePage(urlLotes);
