@@ -135,7 +135,6 @@ public class InmoclickConsumer {
                 //Significa que sigue estando la propiedad
                 if(old.isEqual(newOne))
                 {
-
                     hasToAdd = false;
                     break;
                 }
@@ -168,13 +167,11 @@ public class InmoclickConsumer {
             for(InmoclickPropiedad old :oldProperties){
                 //Significa que sigue estando la propiedad
                 if(old.isEqual(newOne)) {
-                    System.out.println("Entro al break");
                     hasToAdd = false;
                     break;
                 }
             }
             if(hasToAdd) {
-                System.out.println("Agrego con id " + newOne.id);
                 newOnes.add(newOne);
             }
         }
