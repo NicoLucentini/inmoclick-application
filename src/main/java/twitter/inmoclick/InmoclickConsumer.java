@@ -21,7 +21,8 @@ public class InmoclickConsumer {
 
 
     public List<InmoclickPropiedad> casas = new ArrayList<>();
-
+    public List<InmoclickPropiedad> dptos = new ArrayList<>();
+    public List<InmoclickPropiedad> lotes = new ArrayList<>();
     public void LoadValues(){
 
 
@@ -29,7 +30,8 @@ public class InmoclickConsumer {
         long start1 = System.currentTimeMillis();
         System.out.println("Start loading values");
         casas = listCasas();
-
+        dptos = listDepartamentos();
+        lotes = listLotes();
 
         System.out.println("Finish loading values");
         long end = System.currentTimeMillis();
@@ -108,6 +110,75 @@ public class InmoclickConsumer {
 
     public List<InmoclickPropiedad> listDepartamentos(){
         return consumePage(urlDepartamentos);
+    }
+
+
+    public List<InmoclickPropiedad> getRemoveds(String filter, List<InmoclickPropiedad> oldProperties){
+        List<InmoclickPropiedad> removeds = new ArrayList<>();
+
+        //Las removidas son las que antes estaban el old y ya no estan mas en new
+
+        List<InmoclickPropiedad> propiedadesActuales = new ArrayList<>();
+
+        switch (filter){
+            case "casas" : { propiedadesActuales = casas;break;}
+            case "lotes" :{ propiedadesActuales = lotes;break;}
+            case "departamentos" : { propiedadesActuales = dptos;break;}
+        }
+
+
+        boolean hasToAdd = true;
+        for(InmoclickPropiedad old :oldProperties){
+            hasToAdd = true;
+            for(InmoclickPropiedad newOne : propiedadesActuales)
+            {
+                //Significa que sigue estando la propiedad
+                if(old.isEqual(newOne))
+                {
+
+                    hasToAdd = false;
+                    break;
+                }
+            }
+
+            if(hasToAdd)
+                removeds.add(old);
+        }
+        return removeds;
+    }
+
+    public List<InmoclickPropiedad> getNewOnes(String filter, List<InmoclickPropiedad> oldProperties){
+        List<InmoclickPropiedad> newOnes = new ArrayList<>();
+
+        //Las nuevas son las que estan en departamentos pero que no estaban en oldProperties
+
+        List<InmoclickPropiedad> propiedadesActuales = new ArrayList<>();
+
+        switch (filter){
+            case "casas" : { propiedadesActuales = casas;break;}
+            case "lotes" :{ propiedadesActuales = lotes;break;}
+            case "departamentos" : { propiedadesActuales = dptos;break;}
+        }
+
+
+        boolean hasToAdd = true;
+        for(InmoclickPropiedad newOne : propiedadesActuales)
+        {
+            hasToAdd = true;
+            for(InmoclickPropiedad old :oldProperties){
+                //Significa que sigue estando la propiedad
+                if(old.isEqual(newOne)) {
+                    System.out.println("Entro al break");
+                    hasToAdd = false;
+                    break;
+                }
+            }
+            if(hasToAdd) {
+                System.out.println("Agrego con id " + newOne.id);
+                newOnes.add(newOne);
+            }
+        }
+        return newOnes;
     }
 
 }
