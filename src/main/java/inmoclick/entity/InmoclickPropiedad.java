@@ -1,7 +1,6 @@
-package twitter.inmoclick;
+package inmoclick.entity;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class InmoclickPropiedad implements Serializable {
 

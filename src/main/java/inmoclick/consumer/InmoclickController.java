@@ -1,5 +1,6 @@
-package twitter.inmoclick;
+package inmoclick.consumer;
 
+import inmoclick.entity.InmoclickPropiedad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

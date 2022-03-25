@@ -1,5 +1,6 @@
-package twitter.inmoclick;
+package inmoclick.controller;
 
+import inmoclick.consumer.InmoclickConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/casas")
-public class CasasController {
+@RequestMapping("/lotes")
+public class LotesController {
     @Autowired
     private InmoclickConsumer consumer;
 
     @GetMapping("/list")
-    public ResponseEntity listCasas(){
+    public ResponseEntity listLotes(){
         try {
-            var res = consumer.casas;
+            var res = consumer.lotes;
             return  ResponseEntity.status(200).body(res);
         }
         catch (Exception e){

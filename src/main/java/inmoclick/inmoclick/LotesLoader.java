@@ -1,5 +1,6 @@
-package twitter.inmoclick;
+package inmoclick.inmoclick;
 
+import inmoclick.consumer.InmoclickConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

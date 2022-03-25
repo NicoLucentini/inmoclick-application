@@ -1,7 +1,8 @@
-package twitter.inmoclick;
+package inmoclick.consumer;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import inmoclick.entity.InmoclickPropiedad;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import java.util.*;
