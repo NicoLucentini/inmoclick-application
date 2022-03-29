@@ -1,5 +1,6 @@
-package inmoclick.consumer;
+package inmoclick.controller;
 
+import inmoclick.consumer.InmoclickConsumer;
 import inmoclick.entity.InmoclickPropiedad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

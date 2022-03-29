@@ -6,49 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="341d9025-8490-4369-b1a9-6b9a962f657b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/Follow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowJpa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowJpaAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/follows/FollowService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/infra/InMemoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/CasasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/CasasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/DptosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/DptosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/InmoclickConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/InmoclickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/InmoclickPropiedad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/InmoclickPropiedades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/LotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/LotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/inmoclick/LotesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/inmoclick/LotesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/test/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/test/Perro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/tweets/Tweet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/tweets/TweetController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/tweets/TweetJpa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/tweets/TweetRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/tweets/TweetService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/DuplicateUserException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/NonExistentUserException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UserJpa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UserJpaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/twitter/users/UsersJpaAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/follows/FollowControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/follows/FollowRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/follows/FollowServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inmoclick/InmoclickServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inmoclick/InmoclickServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tweets/TweetServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tweets/TweetsControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/UserControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/UserRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/users/UserServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
