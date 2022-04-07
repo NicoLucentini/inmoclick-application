@@ -7,8 +7,8 @@
     <list default="true" id="341d9025-8490-4369-b1a9-6b9a962f657b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedad.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/twitter/follows" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

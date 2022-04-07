@@ -15,8 +15,8 @@ public class InmoclickController {
     @Autowired
     private InmoclickConsumer consumer;
 
-    @GetMapping("/tincho")
-    public ResponseEntity listLotes(){
+    @GetMapping("/welcome")
+    public ResponseEntity welcome(){
         try {
             return  ResponseEntity.status(200).body("Hola Gato");
         }
@@ -24,6 +24,18 @@ public class InmoclickController {
             return  ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+    @GetMapping("/refresh")
+    public ResponseEntity refresh(){
+        try {
+            consumer.LoadValues();
+            return  ResponseEntity.status(200).body("Listo pa, refresheada la data ya le podes pegar a la otra url");
+        }
+        catch (Exception e){
+            return  ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+
 
     @PostMapping("/eliminadas/{filter}")
     public ResponseEntity getDifference(@PathVariable String filter, @RequestBody List<InmoclickPropiedad> propiedades){
@@ -35,6 +47,7 @@ public class InmoclickController {
             return  ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
     @PostMapping("/nuevas/{filter}")
     public ResponseEntity getNuevas(@PathVariable String filter, @RequestBody List<InmoclickPropiedad> propiedades){
         try {
