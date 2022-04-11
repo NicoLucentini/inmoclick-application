@@ -1,6 +1,6 @@
 package inmoclick.controller;
 
-import inmoclick.consumer.InmoclickConsumer;
+import inmoclick.service.InmoclickConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

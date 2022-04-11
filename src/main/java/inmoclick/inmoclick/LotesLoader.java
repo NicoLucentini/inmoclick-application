@@ -1,6 +1,6 @@
 package inmoclick.inmoclick;
 
-import inmoclick.consumer.InmoclickConsumer;
+import inmoclick.service.InmoclickConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

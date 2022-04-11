@@ -1,8 +1,11 @@
-package inmoclick.consumer;
+package inmoclick.service;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import inmoclick.entity.InmoclickPropiedad;
+import inmoclick.entity.PropiedadEntity;
+import inmoclick.repository.PropiedadesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import java.util.*;
@@ -27,24 +30,36 @@ public class InmoclickConsumer {
     public List<InmoclickPropiedad> lotes = new ArrayList<>();
 
 
+    @Autowired
+    private PropiedadesRepository repository;
+
     public void LoadValues(){
 
 
-        casas.clear();
+        //casas.clear();
         lotes.clear();
-        dptos.clear();
+        //dptos.clear();
 
         long start1 = System.currentTimeMillis();
 
         System.out.println("Start loading values");
-        casas = listCasas();
+        //casas = listCasas();
         dptos = listDepartamentos();
-        lotes = listLotes();
+        //lotes = listLotes();
 
         System.out.println("Finish loading values");
         long end = System.currentTimeMillis();
 
-        System.out.println("Elapsed Time in milli seconds: "+ (end-start1));
+        System.out.println("Elapsed Time loading values: "+ (end-start1) + " ms");
+
+
+        start1 = System.currentTimeMillis();
+        System.out.println("Start saving values");
+        doMagic();
+        System.out.println("End saving values");
+        end = System.currentTimeMillis();
+        System.out.println("Elapsed Time saving values : "+ (end-start1) + " ms");
+
     }
 
     private Integer getAmount(String response){
@@ -120,6 +135,42 @@ public class InmoclickConsumer {
 
     public List<InmoclickPropiedad> listDepartamentos(){
         return consumePage(urlDepartamentos);
+    }
+
+
+    public void doMagic() {
+
+        //old database
+        List<PropiedadEntity> olds = repository.findAll();
+
+
+        List<InmoclickPropiedad> allProps = new ArrayList<InmoclickPropiedad>();
+
+        allProps.addAll(casas);
+        allProps.addAll(lotes);
+        allProps.addAll(dptos);
+
+        for(PropiedadEntity old : olds){
+            boolean exists = allProps.stream().anyMatch(x->x.id.equals(old.id));
+
+            if(!exists)
+            {
+                old.activa = 0;
+                repository.save(old);
+            }
+        }
+
+
+        for (InmoclickPropiedad prop : allProps){
+            boolean exists = repository.existsById(prop.id);
+
+            PropiedadEntity e = PropiedadEntity.from(prop);
+            e.nueva = exists ? 0 : 1;
+            prop.nueva = e.nueva;
+            e.activa = 1; //sacar la diferencia por mientras
+            prop.activa = e.activa;
+            repository.save(e);
+        }
     }
 
 

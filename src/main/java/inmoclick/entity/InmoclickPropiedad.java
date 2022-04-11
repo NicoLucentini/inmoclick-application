@@ -43,6 +43,8 @@ public class InmoclickPropiedad implements Serializable {
     public String usuario_id;
     public String nombre;
 
+    public int nueva;
+    public int activa;
     public boolean isEqual(InmoclickPropiedad other){
         return this.id.equals(other.id);
     }

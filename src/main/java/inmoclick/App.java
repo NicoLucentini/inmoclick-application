@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import inmoclick.consumer.InmoclickConsumer;
+import inmoclick.service.InmoclickConsumer;
 
 import java.util.Date;
 import java.util.Timer;
