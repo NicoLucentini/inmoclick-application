@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="341d9025-8490-4369-b1a9-6b9a962f657b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/consumer/InmoclickConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/service/InmoclickConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/controller/CasasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/CasasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/controller/DptosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/DptosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/InmoclickController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/controller/LotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/controller/LotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/entity/InmoclickPropiedad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/inmoclick/inmoclick/LotesLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/inmoclick/inmoclick/LotesLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/inmoclick/InmoclickServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/inmoclick/InmoclickServiceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="341d9025-8490-4369-b1a9-6b9a962f657b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +30,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1x05rKsdor3xKxTzHiqXGvkvirf" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />

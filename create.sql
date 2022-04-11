@@ -1,0 +1,30 @@
+drop table propiedades;
+
+create table propiedades(
+	id int primary key,
+	propiedad_id int,
+	url varchar(255),
+	tip_desc varchar(255),
+	con_desc varchar(255),
+	loc_desc varchar(255),
+	pro_desc varchar(255),
+	prp_dom varchar(255),
+	superficie_total int,
+	superficie_cubierta int,
+	prp_pre_dol int,
+	oportunidad_dolares int,
+	agua varchar(255),
+	luz varchar(255),
+	gas varchar(255),
+	baños varchar(255),
+	cochera varchar(255),
+	dormitorios varchar(255),
+	prp_lat varchar(255),
+	prp_lng varchar(255),
+	prp_alta varchar(255),
+	prp_mod varchar(255),
+	usuario_id varchar(255),
+	nombre varchar(255),
+	activa int,
+	nueva int
+	); 
