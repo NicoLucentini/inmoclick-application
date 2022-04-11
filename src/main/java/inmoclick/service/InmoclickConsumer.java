@@ -163,11 +163,9 @@ public class InmoclickConsumer {
 
         for (InmoclickPropiedad prop : allProps){
             boolean exists = repository.existsById(prop.id);
-
             PropiedadEntity e = PropiedadEntity.from(prop);
             e.nueva = exists ? 0 : 1;
             prop.nueva = e.nueva;
-            e.activa = 1; //sacar la diferencia por mientras
             prop.activa = e.activa;
             repository.save(e);
         }
