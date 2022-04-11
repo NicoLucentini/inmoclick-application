@@ -36,16 +36,16 @@ public class InmoclickConsumer {
     public void LoadValues(){
 
 
-        //casas.clear();
+        casas.clear();
         lotes.clear();
-        //dptos.clear();
+        dptos.clear();
 
         long start1 = System.currentTimeMillis();
 
         System.out.println("Start loading values");
-        //casas = listCasas();
+        casas = listCasas();
         dptos = listDepartamentos();
-        //lotes = listLotes();
+        lotes = listLotes();
 
         System.out.println("Finish loading values");
         long end = System.currentTimeMillis();
