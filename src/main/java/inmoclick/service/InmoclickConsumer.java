@@ -3,6 +3,7 @@ package inmoclick.service;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import inmoclick.entity.InmoclickPropiedad;
+import inmoclick.entity.InmoclickPropiedades;
 import inmoclick.entity.PropiedadEntity;
 import inmoclick.repository.PropiedadesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,12 @@ public class InmoclickConsumer {
     private String urlLotes ="https://www.inmoclick.com.ar/inmuebles/lotes-y-terrenos-en-venta?favoritos=0&limit="+count+"&prevEstadoMap=&q=Mendoza&lastZoom=13&precio%5Bmin%5D=&precio%5Bmax%5D=&moneda=1&sup_cubierta%5Bmin%5D=&sup_cubierta%5Bmax%5D=&sup_total%5Bmin%5D=&sup_total%5Bmax%5D=&precio_pesos_m2%5Bmin%5D=&precio_pesos_m2%5Bmax%5D=&precio_dolares_m2%5Bmin%5D=&precio_dolares_m2%5Bmax%5D=&expensas%5Bmin%5D=&expensas%5Bmax%5D=";
     private String urlCasas = "https://www.inmoclick.com.ar/inmuebles/casas-en-venta?favoritos=0&limit="+count+"&prevEstadoMap=&q=Mendoza&lastZoom=13&precio%5Bmin%5D=&precio%5Bmax%5D=&moneda=1&sup_cubierta%5Bmin%5D=&sup_cubierta%5Bmax%5D=&sup_total%5Bmin%5D=&sup_total%5Bmax%5D=";
     private String urlDepartamentos = "https://www.inmoclick.com.ar/inmuebles/departamentos-en-venta?favoritos=0&limit="+count+"&prevEstadoMap=&q=Mendoza&lastZoom=13&precio%5Bmin%5D=&precio%5Bmax%5D=&moneda=1&sup_cubierta%5Bmin%5D=&sup_cubierta%5Bmax%5D=&sup_total%5Bmin%5D=&sup_total%5Bmax%5D=";
-
+    private String urlAlquilerDepartamentos = "https://www.inmoclick.com.ar/inmuebles/departamentos-en-alquiler?favoritos=0&limit="+count+"&prevEstadoMap=&q=Mendoza&lastZoom=13&precio%5Bmin%5D=&precio%5Bmax%5D=&moneda=1&sup_cubierta%5Bmin%5D=&sup_cubierta%5Bmax%5D=&expensas%5Bmin%5D=&expensas%5Bmax%5D=";
 
     public List<InmoclickPropiedad> casas = new ArrayList<>();
     public List<InmoclickPropiedad> dptos = new ArrayList<>();
     public List<InmoclickPropiedad> lotes = new ArrayList<>();
-
+    public List<InmoclickPropiedad> dptosAlquiler = new ArrayList<>();
 
     @Autowired
     private PropiedadesRepository repository;
@@ -39,6 +40,7 @@ public class InmoclickConsumer {
         casas.clear();
         lotes.clear();
         dptos.clear();
+        dptosAlquiler.clear();
 
         long start1 = System.currentTimeMillis();
 
@@ -46,6 +48,7 @@ public class InmoclickConsumer {
         casas = listCasas();
         dptos = listDepartamentos();
         lotes = listLotes();
+        dptosAlquiler = listDptosAlquiler();
 
         System.out.println("Finish loading values");
         long end = System.currentTimeMillis();
@@ -137,6 +140,7 @@ public class InmoclickConsumer {
         return consumePage(urlDepartamentos);
     }
 
+    public List<InmoclickPropiedad> listDptosAlquiler() {return consumePage(urlAlquilerDepartamentos);}
 
     public void doMagic() {
 
@@ -149,6 +153,7 @@ public class InmoclickConsumer {
         allProps.addAll(casas);
         allProps.addAll(lotes);
         allProps.addAll(dptos);
+        allProps.addAll(dptosAlquiler);
 
         for(PropiedadEntity old : olds){
             boolean exists = allProps.stream().anyMatch(x->x.id.equals(old.id));
@@ -183,6 +188,7 @@ public class InmoclickConsumer {
             case "casas" : { propiedadesActuales = casas;break;}
             case "lotes" :{ propiedadesActuales = lotes;break;}
             case "departamentos" : { propiedadesActuales = dptos;break;}
+            case "departamentosAlquiler" : {propiedadesActuales = dptosAlquiler;break;}
         }
 
 
@@ -216,6 +222,7 @@ public class InmoclickConsumer {
             case "casas" : { propiedadesActuales = casas;break;}
             case "lotes" :{ propiedadesActuales = lotes;break;}
             case "departamentos" : { propiedadesActuales = dptos;break;}
+            case "departamentosAlquiler" : {propiedadesActuales = dptosAlquiler;break;}
         }
 
 
